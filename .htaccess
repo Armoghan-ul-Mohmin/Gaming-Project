@@ -1,0 +1,31 @@
+RewriteEngine On
+
+# Map "/dashboard" to "dashboard.php"
+RewriteRule ^dashboard$ dashboard.php [L]
+
+# Map "/" to "index.php"
+RewriteRule ^$ index.php [L]
+
+# Map "/login" to "login.php"
+RewriteRule ^login$ login.php [L]
+
+# Map "/register" to "register.php"
+RewriteRule ^register$ register.php [L]
+
+# Map "/homepage" to "homepage.php"
+RewriteRule ^homepage$ homepage.php [L]
+
+# Map "/lobby" to "lobby.php"
+RewriteRule ^lobby$ lobby.php [L]
+
+# Map "/game" to "game.php"
+RewriteRule ^game$ game.php [L]
+
+# Map "/chat" to "chat.php"
+RewriteRule ^chat$ chat.php [L]
+
+# Map "/settings" to "settings.php"
+RewriteRule ^settings$ settings.php [L]
+
+# Map "/logout" to "logout.php"
+RewriteRule ^logout$ includes/logout.php [L]
