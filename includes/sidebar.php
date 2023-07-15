@@ -127,3 +127,47 @@
         </li>
     </ul>
 </nav>
+
+
+<!-- ========== Start Profile Modal ========== -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">Profile Information</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body card text-white bg-primary mb-3">
+                <p><strong>Username:</strong>
+                    <?php echo $_SESSION['username']; ?>
+                </p>
+                <p><strong>Email:</strong>
+                    <?php
+                    $query = "SELECT email, avatar, bio FROM users WHERE username = '{$_SESSION['username']}'";
+                    $result = mysqli_query($conn, $query);
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        $userData = mysqli_fetch_assoc($result);
+                        // Assign the fetched data to variables
+                        $userEmail = $userData['email'];
+                        $userBio = $userData['bio'];
+                    } else {
+                        // Handle error if no data found
+                        $userEmail = 'No email available';
+                        $userBio = 'No bio available';
+                    }
+                    // Close the database connection
+                    ?>
+                    <?php echo $userEmail; ?>
+                </p>
+                <p><strong>Avatar:</strong>
+                    <img src="https://i.pinimg.com/originals/37/6d/3b/376d3b1d193dc1a9f43fb52e217a1d28.png" alt=""
+                        width="100px">
+                </p>
+                <p><strong>Bio:</strong>
+                    <?php echo $userBio; ?>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========== End Profile Modal ========== -->

@@ -60,35 +60,35 @@ if (!isset($_SESSION['username'])) {
                         $userName = $row['name'];
                         $userId = $row['id'];
                         ?>
-                        <div class="col-3">
-                            <div class="card border-primary mb-3 mx-2">
-                                <div class="card-header bg-primary text-center">
-                                    <h4>Games</h4>
-                                </div>
-                                <div class="card-body text-center">
-                                    <p><b>
-                                            <?php echo $gameName; ?>
-                                        </b></p>
-                                    <div class="per">
-                                        <table class="table">
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Game Id</th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <?php echo $userName; ?>
-                                                </td>
-                                                <td>
-                                                    <?php echo $userId; ?>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                    <div class="col-3">
+                        <div class="card border-primary mb-3 mx-2">
+                            <div class="card-header bg-primary text-center">
+                                <h4>Games</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <p><b>
+                                        <?php echo $gameName; ?>
+                                    </b></p>
+                                <div class="per">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Game Id</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <?php echo $userName; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $userId; ?>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <?php
+                    </div>
+                    <?php
                         // Increment the counter
                         $counter++;
 
@@ -132,23 +132,23 @@ if (!isset($_SESSION['username'])) {
                                     $name = $row['username'];
                                     $joinDate = $row['join_date'];
                                     ?>
-                                    <tr>
-                                        <td>
-                                            <?php echo $id; ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $name; ?>
-                                        </td>
+                                <tr>
+                                    <td>
+                                        <?php echo $id; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $name; ?>
+                                    </td>
 
-                                        <td>
-                                            <?php echo $joinDate; ?>
-                                        </td>
+                                    <td>
+                                        <?php echo $joinDate; ?>
+                                    </td>
 
-                                        <td>
-                                            <button class="btn btn-primary">View</button>
-                                        </td>
-                                    </tr>
-                                    <?php
+                                    <td>
+                                        <button class="btn btn-primary">View</button>
+                                    </td>
+                                </tr>
+                                <?php
                                 }
                                 // Close the database connection
                                 mysqli_close($conn);
