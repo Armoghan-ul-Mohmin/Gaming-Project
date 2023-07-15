@@ -28,10 +28,10 @@ session_start();
         // Check if register error alert is set
         if (isset($_SESSION['register_error'])) {
             ?>
-        <div class="alert alert-danger" role="alert">
-            <?php echo $_SESSION['register_error']; ?>
-        </div>
-        <?php
+            <div class="alert alert-danger" role="alert">
+                <?php echo $_SESSION['register_error']; ?>
+            </div>
+            <?php
             // Clear the register error alert
             unset($_SESSION['register_error']);
         }
@@ -39,7 +39,7 @@ session_start();
     </div>
     <!-- ========== End Error ========== -->
 
-    <!-- ========== Start Login Form ========== -->
+    <!-- ========== Start Register Form ========== -->
     <main>
         <div class="container py-5">
             <div class="row justify-content-center align-items-center">
@@ -76,7 +76,7 @@ session_start();
             </div>
         </div>
     </main>
-    <!-- ========== End  Login Form========== -->
+    <!-- ========== End  Redister Form========== -->
 
     <?php
     include_once 'includes/scripts.php';
