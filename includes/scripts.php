@@ -1,6 +1,6 @@
 <!-- Bootstrap Js -->
 <script src="static/bootstrap/js/bootstrap.bundle.js"></script>
-<script src="static/bootstrap/js/bootstrap.esm.js"></script>
+<!-- <script src="static/bootstrap/js/bootstrap.esm.js"></script> -->
 <script src="static/bootstrap/js/bootstrap.js"></script>
 
 <!-- JQuery -->
