@@ -89,7 +89,7 @@ if (!isset($_SESSION['username'])) {
                                     // Output the user information in a card with a link to the chat page
                                     echo '<ul class="list-unstyled mb-0">';
                                     echo '<li class="p-2 border-bottom" style="background-color: #eee;">';
-                                    echo '<a href="chat?selected_username=' . $username . '&session_username=' . $_SESSION['username'] . '" class="d-flex justify-content-between">';
+                                    echo '<a href="chat?receiver_username=' . $username . '" class="d-flex justify-content-between">';
                                     echo '<div class="d-flex flex-row">';
                                     echo '<img src="' . $avatar . '" alt="avatar" class="rounded-circle d-flex align-self-center me-3 shadow-1-strong" width="60">';
                                     echo '<div class="pt-1">';
