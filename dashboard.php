@@ -122,7 +122,7 @@ if (!isset($_SESSION['username'])) {
                             </thead>
                             <tbody>
                                 <?php
-                                // Perform database query to fetch attendance data
+                                // Perform database query to fetch user data
                                 $query = "SELECT * FROM users";
                                 $result = mysqli_query($conn, $query);
 
@@ -139,15 +139,49 @@ if (!isset($_SESSION['username'])) {
                                     <td>
                                         <?php echo $name; ?>
                                     </td>
-
                                     <td>
                                         <?php echo $joinDate; ?>
                                     </td>
-
                                     <td>
-                                        <button class="btn btn-primary">View</button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#userModal<?php echo $id; ?>">
+                                            View
+                                        </button>
                                     </td>
                                 </tr>
+
+                                <!-- User Modal -->
+                                <div class="modal fade" id="userModal<?php echo $id; ?>" tabindex="-1"
+                                    aria-labelledby="userModalLabel<?php echo $id; ?>" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="userModalLabel<?php echo $id; ?>">User
+                                                    Details: <?php echo $name; ?>
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- Display user details here -->
+                                                <p><strong>ID:</strong>
+                                                    <?php echo $id; ?>
+                                                </p>
+                                                <p><strong>Name:</strong>
+                                                    <?php echo $name; ?>
+                                                </p>
+                                                <p><strong>Join Date:</strong>
+                                                    <?php echo $joinDate; ?>
+                                                </p>
+                                                <!-- Add more user details if needed -->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <?php
                                 }
                                 // Close the database connection
@@ -155,6 +189,7 @@ if (!isset($_SESSION['username'])) {
                                 ?>
                             </tbody>
                         </table>
+
                     </div>
                 </section>
 
