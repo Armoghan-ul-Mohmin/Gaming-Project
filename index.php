@@ -7,34 +7,34 @@ include 'includes/header.php';
 
 <!-- ========== Start Custom Css  ========== -->
 <style>
-.feature-card {
-    transition: transform 0.3s ease-in-out;
-}
+    .feature-card {
+        transition: transform 0.3s ease-in-out;
+    }
 
-.feature-card:hover {
-    transform: scale(1.05);
-}
+    .feature-card:hover {
+        transform: scale(1.05);
+    }
 
-.carousel-container {
-    position: relative;
-}
+    .carousel-container {
+        position: relative;
+    }
 
-.carousel-container .header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-}
+    .carousel-container .header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    margin-top: auto;
-}
+    .footer {
+        background-color: #f8f9fa;
+        padding: 17px;
+        margin-top: auto;
+    }
 </style>
 <!-- ========== End Custom Css  ========== -->
 
@@ -106,7 +106,7 @@ include 'includes/header.php';
     <!-- ========== End Main Section ========== -->
 
     <!-- ========== Start Features Section ========== -->
-    <section class="features">
+    <!-- <section class="features">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4 mt-5">
@@ -141,8 +141,10 @@ include 'includes/header.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ========== End Features Section ========== -->
+
+    <br>
 
     <!-- ========== Start Footer ========== -->
     <footer class="footer">
